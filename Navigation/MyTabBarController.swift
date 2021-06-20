@@ -55,7 +55,7 @@ class MyTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
 
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        print("Выбранная вкладка: \(viewController.title ?? "")")
+        print("Выбрана новая вкладка \(viewController.title ?? "")")
         return true;
     }
     

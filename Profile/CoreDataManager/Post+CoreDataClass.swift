@@ -12,12 +12,5 @@ import CoreData
 
 @objc(Post)
 public class Post: NSManagedObject {
-    
-//    func update(with post: Post) throws {
-//        self.author = post.author
-//        self.image = post.image
-//        self.likes = post.likes
-//        self.title = post.title
-//        self.views = post.views
-//    }
+
 }

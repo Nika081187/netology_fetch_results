@@ -136,7 +136,6 @@ class LogInViewController: UIViewController {
     private lazy var passwordTextField: UITextField = {
         let passwordTextField = UITextField()
         passwordTextField.backgroundColor = .systemGray6
-//        passwordTextField.isSecureTextEntry = true
         passwordTextField.textColor = .black
         passwordTextField.font = UIFont.systemFont(ofSize: 16)
         passwordTextField.tintColor = .black
