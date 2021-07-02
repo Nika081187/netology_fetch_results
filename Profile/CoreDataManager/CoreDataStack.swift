@@ -63,24 +63,6 @@ final class CoreDataStack {
         save()
     }
     
-    func fetchData<T: NSManagedObject>(for entity: T.Type, predicate: NSPredicate?) -> [Post] {
-        let taskContext = persistentStoreContainer.viewContext
-        
-        taskContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-        taskContext.undoManager = nil
-
-        let entityName = String(describing: T.self)
-        let request = NSFetchRequest<T>(entityName: entityName)
-        request.predicate = predicate
-
-        do {
-            let posts = try taskContext.fetch(request) as! [Post]
-            return posts
-        } catch {
-            fatalError()
-        }
-    }
-    
     private func isExist(title: String, context: NSManagedObjectContext) -> Bool {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Post")
         fetchRequest.predicate = NSPredicate(format: "title = %s", argumentArray: [title])
